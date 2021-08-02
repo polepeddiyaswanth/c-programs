@@ -13,11 +13,11 @@ int palindrome(int n)
 }
      int main()
      {
-     int sum,n;
+     int i,n;
      printf("enter any integer");
      scanf("%d",&n);
-     sum=palindrome(n);
-     if(sum==n)
+     i=palindrome(n);
+     if(i==n)
      {
          printf("%d is palindrome",n);
      }
