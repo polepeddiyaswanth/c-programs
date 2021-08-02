@@ -7,7 +7,7 @@
     scanf("%d",&n);
 
     printf("firsrt %d fibonacci series are:",n);
-    for(i=0;i<n,i++)
+    for(i=0;i<n;i++)
     {
         if(i<=1)
         c=i;
