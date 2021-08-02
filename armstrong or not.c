@@ -5,10 +5,11 @@ void main()
     
     printf("enter any integer:\n");
     scanf("%d",&n);
-     for(i=0;n!=0;n=n/10)
+     for(t=n;n!=0;n=n/10)
      {
          r=n%10;
          sum=sum+(r*r*r);
+         
          
      }
      if(t==sum)
