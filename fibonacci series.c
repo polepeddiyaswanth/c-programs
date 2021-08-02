@@ -1,7 +1,7 @@
 #include<stdio.h>
  void main()
 {
-    int i,a=0,b=1,c,n;
+    int i,n,a=0,b=1,c;
 
     printf("enter number of terms:");
     scanf("%d",&n);
