@@ -1,12 +1,12 @@
 #include<stdio.h>
 void main()
 {
-    int n,count,sum=0;
+    int n,i,sum=0;
     printf("enter the value of n:");
     scanf("%d",&n);
-    for(count=1;count<=n;count++)
+    for(i=1;i<=n;i++)
     {
-        sum=sum+count;
+        sum=sum+i;
     }
     printf("the sum of first %d natural numbers is:%d",n,sum);
 }
