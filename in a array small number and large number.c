@@ -1,14 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int i,j,n,small,large,number[30];
-    char ch;
-programme:    
+    int i,j,n,small,large,number[30],ch;
     printf("enter the value");
     scanf("%d",&n);
     printf("enter the numbers");
      for(i=0;i<n;++i)    
     scanf("%d",&number[i]);
+    do{
+    printf("1.to print the programme.\n2.to exit the programme.\n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1:
     small=number[0];
     large=number[0];
     
@@ -25,25 +29,17 @@ programme:
           
        
     
-}
+    }
 printf("small=%d large=%d",small,large);
-
- loop:
-    printf ("\nDo you want to repeat the programme(Y/N): ");
-    scanf (" %c", &ch);
-
-    if(ch == 'Y' || ch=='y')
-    {
-        goto programme;
-    }
-    else if( ch == 'N' || ch=='n')
-    {
-        return 0;
-    }
-    else
-    {
-        printf("\nPlease enter Yes or NO.\n");
-        goto loop;
-    }
+    break;
+    case 2:
+    printf("bye bye");
+    break;
+    default:
+    printf("choose correct option");
+    break;
+   }
+   }while(ch!=2);
+   return 0;
 }    
 

@@ -1,9 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,k,m;
-    char ch;
-    programme:
+    int n,i,j,k,m,ch;
     printf("how many rows:");
     scanf("%d",&n);
     if(n<=0)
@@ -14,7 +12,14 @@ int main()
     {
         printf("input valid specified");
     }
-    else{
+    else
+    {
+    do{
+         printf("1.to print the stars.\n2.to exit the programme.\n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1:
     for(i=n;i>=0;i--)
     {
         for(j=1;j<=m;j++)
@@ -28,32 +33,19 @@ int main()
         }
            m++;
         printf("\n");
+        
     }
-    loop:
-    printf ("\nDo you want to repeat the programme(Y/N): ");
-    scanf (" %c", &ch);
-
-    if(ch == 'Y' || ch=='y')
-    {
-        goto programme;
+    break;
+    case 2:
+    printf("bye bye");
+    break;
+    default:
+    printf("choose correct option\n");
+    break;
     }
-    else if( ch == 'N' || ch=='n')
-    {
-        return 0;
-    }
-    else
-    {
-        printf("Please enter Yes or NO.\n");
-        goto loop;
-    }
-    }
+    } 
+    
+    while(ch!=2);
+   return 0;
 }
-
-
-// output:
-// n=9
-// *********
-//  *******
-//   *****
-//    ***
-//     *
+}

@@ -2,7 +2,6 @@
 int main()
 {
    int i,j,n1,n2,disp[100][100],ch,sum,x,row,col,flag=0,m1,m2,a,c,k;
-  char var;
    printf("enter the value of rows:");
    scanf("%d",&n1);
    printf("enter the value of coloumns:");
@@ -15,8 +14,8 @@ int main()
          scanf("%d", &disp[i][j]);
       }
    }
-   programme:
-   printf("\nDo you want to print:\n1:index value\n2:matrix\n3.sum of all elements\n4.enter the number in the matrix it will show position\n5.if you want to replace any element in matrix\n6.if you want to count the number how many times repeated\n7.to write the matrix in ascending order.\n8.to write the matrix in descending order.\n");
+  do{
+   printf("\nDo you want to print:\n1:index value\n2:matrix\n3.sum of all elements\n4.enter the number in the matrix it will show position\n5.if you want to replace any element in matrix\n6.if you want to count the number how many times repeated\n7.to write the matrix in ascending order.\n8.to write the matrix in descending order.\n9.to exit the programme\n");
     scanf (" %d", &ch);
     switch(ch)
     {
@@ -165,26 +164,17 @@ for (i = 0; i < n1; ++i)
       }
    }     
       break;
+      case 9:
+      printf("bye");
+      break;
     default:
-          printf("pls enter 1 or 2");
+          printf("choose correct option.");
+          break;
     }
-    loop:
-    printf ("\nDo you want to repeat the programme(Y/N): ");
-    scanf (" %c", &var);
+      } while(ch != 9);
 
-    if(var == 'Y' || var=='y')
-    {
-        goto programme;
-    }
-    else if( var == 'N' || var=='n')
-    {
-        return 0;
-    }
-    else
-    {
-        printf("Please enter Yes or NO.\n");
-        goto loop;
-    }
+   return 0;
+   
     
 
 }

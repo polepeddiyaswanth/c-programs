@@ -2,7 +2,6 @@
 int main()
 {
     int i,j,k,a[100],n,pos,ch,x,index=-1,m1,m2;
-    char var;
     printf("enter the range of array");
     scanf("%d",&n);
     printf("enter the numbers");
@@ -10,8 +9,8 @@ int main()
     scanf("%d",&a[i]);
     for(i=0;i<n;i++)
     printf("%d ",a[i]);
-    programme:
-    printf("\n1.insert an element.\n2.to delete the element\n3.sorting the array into ascending array.\n4.sortng the array into descending order.\n5.replace a number by using index value.\n6.replacing new number by number.\n7.reading new array elements.\n8.delete by index.\n9.delete by number\n10.insert a value through index.\n11.finding the duplicate elements.\n12.deleting the duplicate elements.\n");
+    do{
+    printf("\n1.insert an element.\n2.to delete the element\n3.sorting the array into ascending array.\n4.sortng the array into descending order.\n5.replace a number by using index value.\n6.replacing new number by number.\n7.reading new array elements.\n8.delete by index.\n9.delete by number\n10.insert a value through index.\n11.finding the duplicate elements.\n12.deleting the duplicate elements.\n13.to exit the programme.\n");
     scanf("%d",&ch);
     switch(ch)
     {
@@ -202,24 +201,12 @@ printf("enter the position where you want to insert the element:");
                  for(i=0;i<n;i++)
       printf("%d",a[i]);
                  break;
+    case 13:
+     printf("bye");
+     break;
     default:
     printf("choose correct option");
     }
-    loop:
-    printf ("\nDo you want to repeat the programme(Y/N): ");
-    scanf (" %c", &var);
-
-    if(var == 'Y' || var=='y')
-    {
-        goto programme;
-    }
-    else if( var == 'N' || var=='n')
-    {
-        return 0;
-    }
-    else
-    {
-        printf("Please enter Yes or NO.\n");
-        goto loop;
-    }
+   } while(ch!=13);
+    return 0; 
 }

@@ -1,14 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,a[100],flag;
-    char ch;
-    programme:
+    int n,i,j,a[100],flag,ch;
     printf("enter the value of n");
     scanf("%d",&n);
     printf("enter the numbers");
     for(i=0;i<n;i++)
     scanf("%d",&a[i]);
+    do{
+    printf("1.to print the programme.\n2.to exit the programme.\n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1:
     for(i=0;i<n;i++)
     {
             flag=0;
@@ -25,23 +29,18 @@ int main()
         printf(" %d is prime number \n",a[i]);
             }
     } 
-    loop:
-    printf ("\nDo you want to repeat the programme(Y/N): ");
-    scanf (" %c", &ch);
-
-    if(ch == 'Y' || ch=='y')
-    {
-        goto programme;
+    break;
+    case 2:
+    printf("bye bye");
+    break;
+    default:
+    printf("choose correct option");
+    break;
     }
-    else if( ch == 'N' || ch=='n')
-    {
-        return 0;
     }
-    else
-    {
-        printf("\nPlease enter Yes or NO.\n");
-        goto loop;
-    }
+    while(ch !=2);
+    return 0;
+    
     
 
 }
