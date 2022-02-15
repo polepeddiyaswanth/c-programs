@@ -13,5 +13,5 @@ void main()
     else if(y%4==0)
     printf("%d is a leap year",y);
     else
-    printf("%d is a leap year",y);
+    printf("%d is not a leap year",y);
 }
